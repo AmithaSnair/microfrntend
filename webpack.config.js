@@ -4,7 +4,14 @@ const Dotenv = require('dotenv-webpack');
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:8081/",
+       // Set the filename for the output bundle
+       filename: 'bundle.js',
+
+       // This specifies the output directory as 'public'
+       path: path.resolve(__dirname, 'public'),
+   
+       // Public URL path for loading assets
+       publicPath: argv.mode === 'production' ? 'https://your-domain.com/' : 'http://localhost:8081/',
   },
 
   resolve: {
