@@ -11,7 +11,7 @@ module.exports = (_, argv) => ({
        path: path.resolve(__dirname, 'public'),
    
        // Public URL path for loading assets
-       publicPath: argv.mode === 'production' ? 'https://your-domain.com/' : 'http://localhost:8081/',
+       publicPath: argv.mode === 'production' ? 'https://microfrntend.vercel.app/' : 'http://localhost:8081/',
   },
 
   resolve: {
